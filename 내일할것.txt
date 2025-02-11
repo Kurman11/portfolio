@@ -1,0 +1,32 @@
+미디어 쿼리(테블릿 : 1280 모바일 : 767)
+1. css 정리
+2. 03section 스와이퍼js 적용
+3. popover 모달 
+
+https://icons8.kr/icons
+
+
+<div class="font-position">
+                <h4>오늘, 이음</h4>
+                <div class="font-position-introduction-div">
+                  <ul class="font-position-introduction">
+                    <li>팀 프로젝트</li>
+                    <li>프로젝트 기간: 2023.05.22 ~ 2023.06.16</li>
+                    <li>역할: 팀 리더 / 백엔드 개발</li>
+                    <li>
+                      프로젝트 소개 : 이 프로젝트는 밸런스 게임을 통해
+                      사용자들이 현실적인 주제와 <br />
+                      공감할 수 있는 주제로 나뉘어 소통할 수 있는 커뮤니티
+                      사이트입니다.
+                    </li>
+                  </ul>
+                  <ul class="sub-introduction">
+                    <li>Django를 활용한 기본 CRUD 기능 구현</li>
+                    <li>Spotify API를 활용한 프로필 페이지 제작</li>
+                    <li>프로젝트 진행 중 발생한 각종 오류 해결 및 팀원 지원</li>
+                    <li>
+                      팀 리더 역할 수행, 원활한 협업을 위한 커뮤니케이션 및
+                      프로젝트 관리
+                    </li>
+                  </ul>
+                </div>
