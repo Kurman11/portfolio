@@ -377,11 +377,11 @@ h2 {
 /* 포폴 */
 
 .section03 {
-  padding-top: 120px;
+  padding: 120px 4vw;
 }
 
 .section03 .textBox {
-  width: 1400px;
+  width: 100%;
   margin: 0 auto;
   text-transform: uppercase;
   color: #0f0d0d;
@@ -393,10 +393,6 @@ h2 {
   margin-bottom: 5px;
 }
 
-.section03 .textBox p {
-  font-size: 18px;
-}
-
 .section03 .list {
   display: flex;
   flex-wrap: nowrap;
@@ -404,7 +400,7 @@ h2 {
 }
 
 .section03 .list > li {
-  width: 400px;
+  width: 600px;
   height: 520px;
   padding: 0 30px;
   box-sizing: border-box;
@@ -428,8 +424,9 @@ h2 {
   opacity: 0.5;
 }
 
-.section03 .list > li .box img {
+.section03 .list .project .project-img {
   width: 100%;
+  height: 100%;
 }
 
 .modal {
@@ -446,13 +443,21 @@ h2 {
 }
 
 .modal .modal-close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1vw;
   height: 1vw;
   position: absolute;
-  top: 1vw;
-  right: 1vw;
+  top: 5px;
+  right: 5px;
   border: 1px solid;
   cursor: pointer;
+}
+
+.modal .modal-close-btn svg {
+  width: 1vw;
+  height: 1vw;
 }
 
 .modal .modal-introduction-div {
@@ -460,11 +465,20 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
+  width: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 1vw;
+}
+
+.modal .modal-introduction-div a {
+  align-self: flex-end;
+}
+
+.modal .modal-introduction-div .modal-introduction-ul-sub li {
+  list-style-type: disc;
 }
 
 /* section04 */
@@ -515,6 +529,7 @@ h2 {
   border: 1px solid var(--color-gary);
   border-radius: 5px;
   transition: all 0.4s;
+  font-size: 1vw;
 }
 
 .section03 .modal .modal-introduction-div a:hover,

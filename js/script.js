@@ -245,7 +245,7 @@ let scrollTween = gsap.to(list, {
     pin: true,
     scrub: 1,
     start: "center center",
-    end: "200%",
+    end: "100%",
     markers: false,
   },
 });
