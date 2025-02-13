@@ -49,6 +49,7 @@
 }
 
 html {
+  /* overflow-x: hidden; */
   scroll-behavior: smooth;
 }
 
@@ -79,7 +80,7 @@ h2 {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1000;
   background-color: var(--bgColor-gray40);
 }
 .header.dark {
@@ -263,6 +264,7 @@ h2 {
 .section02 .section02-title {
   position: absolute;
   color: var(--color-black);
+  font-size: 4vw;
 }
 
 .section02 > img,
@@ -270,29 +272,32 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 5vw;
-  height: 5vw;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 1vw;
-  font-size: 1.5vw;
+}
+
+.section02 > img {
+  width: 70px;
+  height: 70px;
 }
 
 .section02 .section-card {
-  display: flex;
-  gap: 1vw;
   flex-direction: column;
-  width: 25vw;
-  height: 25vw;
+  align-items: center;
+  gap: 20px;
+  width: 400px;
+  height: 400px;
+  font-size: 20px;
+  border-radius: 20px;
   background-color: var(--color-white);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .section02 .section-card div img {
-  height: 4vw;
+  height: 60px;
 }
 
 /* ===== Section 03 ===== */
@@ -377,7 +382,8 @@ h2 {
 /* 포폴 */
 
 .section03 {
-  padding: 120px 4vw;
+  overflow: hidden;
+  padding: 120px 0;
 }
 
 .section03 .textBox {
@@ -388,9 +394,10 @@ h2 {
 }
 
 .section03 .textBox h2 {
+  margin-bottom: 5px;
+  padding-left: 25px;
   font-size: 72px;
   letter-spacing: -5px;
-  margin-bottom: 5px;
 }
 
 .section03 .list {
@@ -430,8 +437,8 @@ h2 {
 }
 
 .modal {
-  width: 30vw;
-  height: 35vw;
+  width: 550px;
+  height: 600px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -446,8 +453,8 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1vw;
-  height: 1vw;
+  width: 16px;
+  height: 16px;
   position: absolute;
   top: 5px;
   right: 5px;
@@ -456,8 +463,8 @@ h2 {
 }
 
 .modal .modal-close-btn svg {
-  width: 1vw;
-  height: 1vw;
+  width: 13px;
+  height: 13px;
 }
 
 .modal .modal-introduction-div {
@@ -470,7 +477,6 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1vw;
 }
 
 .modal .modal-introduction-div a {
@@ -517,11 +523,8 @@ h2 {
   gap: 15px;
 }
 
-.section03 .modal .modal-introduction-div a,
+.modal .modal-introduction-div a,
 .section04 .aspiration a {
-  width: 5vw;
-  height: 2vw;
-  line-height: 2vw;
   text-align: center;
   font-size: 16px;
   color: var(--color-gary);
@@ -529,10 +532,22 @@ h2 {
   border: 1px solid var(--color-gary);
   border-radius: 5px;
   transition: all 0.4s;
+}
+
+.modal .modal-introduction-div a {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.section04 .aspiration a {
+  width: 5vw;
+  height: 2vw;
+  line-height: 2vw;
   font-size: 1vw;
 }
 
-.section03 .modal .modal-introduction-div a:hover,
+.modal .modal-introduction-div a:hover,
 .section04 .aspiration a:hover {
   color: var(--color-white);
   background-color: var(--color-gary);
@@ -559,6 +574,24 @@ h2 {
   height: 10vh;
   background-color: var(--bgColor-shadow90);
   color: var(--color-white);
+}
+
+body:has(:popover-open) {
+  overflow: hidden;
+}
+
+body:has(:popover-open) .section03 .list > li .box:hover {
+  transform: scale(1);
+  filter: none;
+}
+
+body:has(:popover-open) .section03 .list > li .box:hover:after {
+  opacity: 1;
+}
+
+body:has(:popover-open) .header a {
+  pointer-events: none;
+  cursor: auto;
 }
 
 /* tablet */
@@ -605,10 +638,60 @@ h2 {
     display: none;
   }
 
+  /* section02 */
+
+  .section02 > img {
+    width: 7vw;
+    height: 7vw;
+  }
+
+  .section02 .section-card {
+    gap: 10px;
+    width: 40vw;
+    height: 40vw;
+    font-size: 2vw;
+  }
+
+  .section02 .section-card div img {
+    height: 7vw;
+  }
+
   /* section03 */
+  .section03 .textBox h2 {
+    font-size: 50px;
+  }
+
+  .section03 .list > li {
+    width: 450px;
+    height: 400px;
+    padding: 0 30px;
+  }
+
+  .modal {
+    width: 430px;
+    height: 480px;
+    font-size: 14px;
+  }
+
+  .modal .modal-close-btn {
+    width: 16px;
+    height: 16px;
+  }
+
+  .modal .modal-close-btn svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .modal .modal-introduction-div a {
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .text-area-sub01 {
     white-space: nowrap;
   }
@@ -617,6 +700,15 @@ h2 {
   }
 
   /* section01 */
+  .section01 .profile {
+    width: 80%;
+    height: 23%;
+  }
+
+  .section01 .profile h2 {
+    font-size: 12px;
+  }
+
   .section01 .profile div {
     width: 100%;
   }
@@ -624,20 +716,96 @@ h2 {
     text-align: center;
   }
   .section01 .profile .photoCard img {
-    height: 30vw;
+    height: 40vw;
   }
   .section01 .profile {
     top: 20dvh;
   }
   .section01 .profile .introduction {
-    font-size: 2.5vw;
     gap: 1vw;
+    font-size: 13px;
   }
   .section01 .profile .introduction br {
     display: none;
   }
 
   /* section02 */
+  .section02 .section02-title {
+    font-size: 5vw;
+  }
 
-  /* .section02 div.section-card { width: 45vw; height: 45vw; } */
+  .section02 > img {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .section02 .section-card {
+    gap: 10px;
+    width: 50vw;
+    height: 50vw;
+    font-size: 3vw;
+  }
+
+  .section02 .section-card div img {
+    height: 7vw;
+  }
+
+  /* section03 */
+  .section03 .textBox h2 {
+    font-size: 40px;
+  }
+
+  .section03 .list > li {
+    width: 400px;
+    height: 350px;
+    padding: 0 30px;
+  }
+
+  .modal {
+    width: 350px;
+    height: 400px;
+    font-size: 12px;
+  }
+
+  .modal .modal-close-btn {
+    width: 12px;
+    height: 12px;
+  }
+
+  .modal .modal-close-btn svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .modal .modal-introduction-div a {
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .section01 .profile {
+    width: 80%;
+    height: 23%;
+  }
+
+  .section01 .profile h2 {
+    font-size: 12px;
+  }
+  .section01 .profile .photoCard img {
+    height: 40vw;
+  }
+  .section01 .profile .introduction {
+    gap: 1vw;
+    font-size: 13px;
+  }
+
+  /* section02 */
+  .section02 .section02-title {
+    font-size: 8vw;
+  }
+
+  /* section03 */
 }
