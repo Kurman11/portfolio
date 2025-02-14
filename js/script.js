@@ -45,7 +45,7 @@ const section01Animation = () => {
     {
       id: "#o",
       props: { x: "20", y: "1420", rotate: "-50", duration: 6 },
-      delay: 1,
+      delay: 0.5,
     },
     { id: "#n", props: { x: "45", y: "1650", rotate: "-50", duration: 7 } },
     { id: "#n2", props: { x: "45", y: "1650", rotate: "-50", duration: 7 } },
@@ -235,18 +235,22 @@ section02MobileAnimation();
 
 // section03Animation();
 
-let list = gsap.utils.toArray(".section03 .list > li");
+const section03Slide = () => {
+  let list = gsap.utils.toArray(".section03 .list > li");
 
-let scrollTween = gsap.to(list, {
-  xPercent: -100 * (list.length - 1),
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".section03",
-    pin: true,
-    pinType: "transform",
-    scrub: 1,
-    start: "center center",
-    end: "100%",
-    markers: false,
-  },
-});
+  gsap.to(list, {
+    xPercent: -100 * (list.length - 1),
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".section03",
+      pin: true,
+      pinType: "transform",
+      scrub: 1,
+      start: "center center",
+      end: "100%",
+      markers: false,
+    },
+  });
+};
+
+section03Slide();
