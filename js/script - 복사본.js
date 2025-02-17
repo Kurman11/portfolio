@@ -1,6 +1,70 @@
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.saveStyles(".mobile, .desktop");
 
+const header = document.getElementsByClassName("header")[0];
+const mobile_header = document.getElementsByClassName("mobile-header-sub")[0];
+
+function handleScr() {
+  let scrY = window.scrollY;
+
+  if (scrY === 0) {
+    header.classList.add("down");
+  } else {
+    header.classList.remove("down");
+  }
+}
+window.addEventListener("scroll", handleScr);
+
+function headerColor() {
+  let scrY = window.scrollY + 60;
+  let section01 = document.querySelector(".section01");
+  let sectionTop = section01.offsetTop;
+
+  if (scrY > sectionTop) {
+    document.querySelector("header").classList.add("dark");
+  } else {
+    document.querySelector("header").classList.remove("dark");
+  }
+}
+
+window.addEventListener("scroll", headerColor);
+
+const section01Animation = () => {
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".section01",
+      start: "-30% 25%",
+      end: "150% 80%",
+      scrub: 2,
+      markers: false,
+    },
+  });
+
+  const initials = [
+    { id: "#y", props: { x: "20", y: "1550", rotate: "40", duration: 7 } },
+    {
+      id: "#o",
+      props: { x: "20", y: "1420", rotate: "-50", duration: 6 },
+      delay: 0.5,
+    },
+    { id: "#n", props: { x: "45", y: "1650", rotate: "-50", duration: 7 } },
+    { id: "#n2", props: { x: "45", y: "1650", rotate: "-50", duration: 7 } },
+    { id: "#g", props: { x: "50", y: "1550", rotate: "50", duration: 6 } },
+    {
+      id: "#j",
+      props: { x: "100", y: "1550", rotate: "-40", duration: 6 },
+      delay: 0.5,
+    },
+    { id: "#i", props: { x: "50", y: "1400", rotate: "-80", duration: 7 } },
+  ];
+
+  initials.forEach(({ id, props, delay = 0 }) => {
+    tl.to(id, { ...props, ease: "none" }, delay);
+  });
+};
+
+section01Animation();
+
 const section02Animation = () => {
   let ql = gsap.timeline({
     scrollTrigger: {

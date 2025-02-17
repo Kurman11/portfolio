@@ -75,8 +75,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -89,11 +88,22 @@
   2. strong, em - 태그를 사용하면 키워드 감지 UP (~ 다음 주 금요일)
 -->
 
-    <header>
-      <div class="logo-area">
-        <h1>CREATIVE KIM YONGJIN</h1>
+    <header class="header down">
+      <div class="header-sub">
+        <nav class="nav">
+          <ul class="wht">
+            <li><a href="#main">HOME</a></li>
+            <li><a href="#section01">ABOUT ME</a></li>
+            <li><a href="#section02">SKILLS</a></li>
+            <li><a href="#section03">PROJECT</a></li>
+            <li><a href="#section04">CONTACT</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
+    <div class="logo-area">
+      <h1>CREATIVE KIM YONGJIN</h1>
+    </div>
     <main class="main" id="main">
       <div class="main-text-box">
         <p class="text-area">안녕하세요!</p>
@@ -103,12 +113,30 @@
       <div class="bg-filter"></div>
     </main>
     <section class="section01" id="section01">
-      <div
-        class="profile"
-        data-aos="fade-up"
-        data-aos-delay="200"
-        data-aos-duration="1000"
-      >
+      <div class="initials">
+        <div id="y">
+          <span class="Y">Y</span>
+        </div>
+        <div id="o">
+          <span class="O">O</span>
+        </div>
+        <div id="n">
+          <span class="N">N</span>
+        </div>
+        <div id="g">
+          <span class="G">G</span>
+        </div>
+        <div id="j">
+          <span class="J">J</span>
+        </div>
+        <div id="i">
+          <span class="I">I</span>
+        </div>
+        <div id="n2">
+          <span class="N">N</span>
+        </div>
+      </div>
+      <div class="profile">
         <div>
           <h2>About me</h2>
           <div class="photoCard">
@@ -315,9 +343,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="https://unpkg.com/gsap/dist/Observer.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script>
-      AOS.init();
-    </script>
     <script src="./js/script.js"></script>
   </body>
 </html>

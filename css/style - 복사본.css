@@ -66,7 +66,57 @@ h1 {
 h2 {
   font-size: 2vw;
 }
+.blind {
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+.header {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: var(--bgColor-gray40);
+}
+.header.dark {
+  background-color: var(--bgColor-shadow90);
+}
+.header.down {
+  top: auto;
+  bottom: 0;
+}
+.header .header-sub {
+  width: calc(100% - 100px);
+  height: 100%;
+  margin: 0 auto;
+}
 
+.header .nav {
+  height: 100%;
+}
+.header .nav ul {
+  display: flex;
+  height: 100%;
+  font-size: 25px;
+  color: var(--color-white);
+  font-weight: var(--font-SemiBold);
+}
+.nav ul li {
+  flex: 1;
+  height: 100%;
+}
+.nav ul li a {
+  display: block;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
 .logo-area {
   width: 100%;
   padding: 0 50px;
@@ -121,10 +171,52 @@ h2 {
 
 /* ===== Section 01 ===== */
 .section01 {
-  height: 100dvh;
+  height: 2000px;
   padding: 200px 0 100px 0;
   position: relative;
-  background: rgb(35 35 35);
+  background: var(--bgColor-blue-shadow03);
+}
+.section01 .initials {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+.section01 .initials div {
+  width: 10vw;
+  height: 10vw;
+}
+.section01 .initials div span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 8vw;
+  font-weight: var(--font-bold);
+  border: 2px solid;
+  border-radius: 50%;
+}
+.section01 .initials div .Y,
+.section01 .initials div .N {
+  border-color: wheat;
+  color: wheat;
+}
+.section01 .initials div .O {
+  border-color: var(--color-yellow);
+  color: var(--color-yellow);
+}
+.section01 .initials div .G {
+  border-color: var(--color-green);
+  color: var(--color-green);
+}
+.section01 .initials div .J {
+  border-color: var(--color-orange);
+  color: var(--color-orange);
+}
+.section01 .initials div .I {
+  border-color: var(--color-sky-blue);
+  color: var(--color-sky-blue);
 }
 .section01 .profile {
   display: flex;
@@ -132,15 +224,16 @@ h2 {
   gap: 70px;
   width: 60%;
   padding: 60px;
+  position: sticky;
   top: 25%;
   margin: auto;
-  background-color: rgb(55 55 55);
+  background-color: var(--bgColor-gray40);
   border-radius: 10px;
 }
 .section01 .profile h2 {
   margin-bottom: 15px;
   font-weight: var(--font-bold);
-  color: white;
+  color: var(--color-black);
 }
 .section01 .profile .photoCard img {
   height: 300px;
@@ -153,19 +246,19 @@ h2 {
   gap: 10px;
   font-size: 20px;
   font-weight: var(--font-medium);
-  color: white;
+  color: var(--color-black);
 }
 
 /* ===== Section 02 ===== */
 
 .section02 {
   overflow: hidden;
-  display: flex;
   width: 100%;
   height: 100dvh;
   position: relative;
   padding: 6vh 4vw;
-  background: #eee;
+  background: var(--bgColor-blue-shadow02);
+  display: flex;
 }
 
 .section02 .section02-title {
