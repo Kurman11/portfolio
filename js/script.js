@@ -171,22 +171,37 @@ section02MobileAnimation();
 
 // section03Animation();
 
-const section03Slide = () => {
-  let list = gsap.utils.toArray(".section03 .list > li");
+// const section03Slide = () => {
+//   let list = gsap.utils.toArray(".section03 .list > li");
 
-  gsap.to(list, {
-    xPercent: -100 * (list.length - 1),
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".section03",
-      pin: true,
-      pinType: "transform",
-      scrub: 1,
-      start: "center center",
-      end: "100%",
-      markers: false,
-    },
-  });
-};
+//   gsap.to(list, {
+//     xPercent: -100 * (list.length - 1),
+//     ease: "none",
+//     scrollTrigger: {
+//       trigger: ".section03",
+//       pin: true,
+//       pinType: "transform",
+//       scrub: 1,
+//       start: "center center",
+//       end: "100%",
+//       markers: false,
+//     },
+//   });
+// };
 
-section03Slide();
+// section03Slide();
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  centeredSlides: true,
+});
