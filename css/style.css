@@ -119,44 +119,8 @@ h2 {
   animation-delay: 1s;
 }
 
-/* ===== Section 01 ===== */
-.section01 {
-  height: 100dvh;
-  padding: 200px 0 100px 0;
-  position: relative;
-  background: rgb(35 35 35);
-}
-.section01 .profile {
-  display: flex;
-  align-items: center;
-  gap: 70px;
-  width: 60%;
-  padding: 60px;
-  top: 25%;
-  margin: auto;
-  background-color: rgb(55 55 55);
-  border-radius: 10px;
-}
-.section01 .profile h2 {
-  margin-bottom: 15px;
-  font-weight: var(--font-bold);
-  color: var(--color-white);
-}
-.section01 .profile .photoCard img {
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-.section01 .profile .introduction {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-size: 20px;
-  font-weight: var(--font-medium);
-  color: var(--color-white);
-}
-
 /* section, section-title */
+.section01,
 .section02,
 .section03 {
   /* overflow: hidden; */
@@ -167,11 +131,81 @@ h2 {
   padding: 6vh 4vw;
 }
 
+.section01 .section01-title,
 .section02 .section02-title,
 .section03 .section03-title {
   position: absolute;
   color: var(--color-white);
   font-size: 4vw;
+}
+
+/* ===== Section 01 ===== */
+.section01 {
+  display: flex;
+  flex-direction: column;
+  background: rgb(35 35 35);
+}
+.section01 .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 70%;
+  padding: 60px;
+  top: 25%;
+  margin: auto;
+  background-color: rgb(55 55 55);
+  border-radius: 10px;
+}
+.section01 .profile .introduction {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+/* .section01 .profile .introduction-sub {
+  display: flex;
+  align-items: center;
+  width: 55%;
+  height: 100px;
+  position: relative;
+  padding: 15px;
+
+  border-radius: 10px;
+  color: var(--color-white);
+} */
+
+/* .section01 .profile h2 {
+  margin-bottom: 15px;
+  font-weight: var(--font-bold);
+  color: var(--color-white);
+} */
+.section01 .profile .photoCard img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.section01 .profile ul {
+  /* display: flex;
+  flex-wrap: wrap;
+  gap: 10px; */
+  font-size: 18px;
+  font-weight: var(--font-medium);
+  color: var(--color-white);
+}
+
+/* .section01 .profile ul li:nth-child(odd) {
+  width: 30%;
+}
+.section01 .profile ul li:nth-child(even) {
+  width: 60%;
+} */
+
+.profile ul .introduction-flex {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 50px;
 }
 
 /* ===== Section 02 ===== */
