@@ -1,6 +1,41 @@
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.saveStyles(".mobile, .desktop");
 
+const sidebar = document.getElementsByClassName("sidebar")[0];
+const sidebarItems = document.querySelectorAll(".sidebar ul li a");
+
+function handleScr() {
+  let scrY = window.scrollY;
+  let main = document.getElementsByClassName("main")[0];
+  let section01 = document.getElementsByClassName("section01")[0];
+  let section02 = document.getElementsByClassName("section02")[0];
+  let section03 = document.getElementsByClassName("section03")[0];
+  let section04 = document.getElementsByClassName("section04")[0];
+  let sections = [main, section01, section02, section03, section04];
+
+  sections.forEach((section, index) => {
+    if (!section) return;
+
+    let nextSection = sections[index + 1];
+    let isActive =
+      scrY >= section.offsetTop &&
+      (!nextSection || scrY < nextSection.offsetTop);
+
+    let link = document.querySelector(
+      `.sidebar ul li a[href='#${section.id}']`
+    );
+    if (link) {
+      if (isActive) {
+        link.parentElement.classList.add("active");
+      } else {
+        link.parentElement.classList.remove("active");
+      }
+    }
+  });
+}
+
+window.addEventListener("scroll", handleScr);
+
 const section02Animation = () => {
   let ql = gsap.timeline({
     scrollTrigger: {
@@ -191,17 +226,35 @@ section02MobileAnimation();
 
 // section03Slide();
 
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  centeredSlides: true,
-});
+const swiper = () => {
+  return new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    centeredSlides: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1280: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
+};
+
+swiper();

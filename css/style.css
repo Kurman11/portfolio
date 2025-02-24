@@ -118,6 +118,41 @@ h2 {
   animation: slide-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation-delay: 1s;
 }
+/* sidebar */
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 1100;
+}
+
+.sidebar ul li a {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+  font-weight: normal;
+  color: transparent;
+}
+
+.sidebar ul li.active a {
+  color: white;
+}
+
+.sidebar ul li a::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: white;
+}
+
+.sidebar ul li.active a::after {
+  width: 40px;
+  background-color: white;
+  transition: all 0.4s ease;
+}
 
 /* section, section-title */
 .section01,
@@ -143,16 +178,15 @@ h2 {
 .section01 {
   display: flex;
   flex-direction: column;
+  height: 80dvh;
   background: rgb(35 35 35);
 }
 .section01 .profile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
   width: 70%;
-  padding: 60px;
-  top: 25%;
+  padding: 55px;
   margin: auto;
   background-color: rgb(55 55 55);
   border-radius: 10px;
@@ -161,6 +195,20 @@ h2 {
   display: flex;
   align-items: center;
   gap: 70px;
+}
+
+.section01 .profile .photoCard img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.section01 .profile ul {
+  /* display: flex;
+  flex-wrap: wrap;
+  gap: 10px; */
+  font-size: 18px;
+  font-weight: var(--font-medium);
+  color: var(--color-white);
 }
 
 /* .section01 .profile .introduction-sub {
@@ -180,19 +228,6 @@ h2 {
   font-weight: var(--font-bold);
   color: var(--color-white);
 } */
-.section01 .profile .photoCard img {
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-.section01 .profile ul {
-  /* display: flex;
-  flex-wrap: wrap;
-  gap: 10px; */
-  font-size: 18px;
-  font-weight: var(--font-medium);
-  color: var(--color-white);
-}
 
 /* .section01 .profile ul li:nth-child(odd) {
   width: 30%;
@@ -385,7 +420,7 @@ h2 {
   background: rgb(35 35 35);
 }
 .section03 .swiper {
-  width: 100%;
+  width: 95%;
   height: 85%;
   top: 15%;
   margin-left: auto;
@@ -567,26 +602,20 @@ body:has(:popover-open) .header a {
   }
 
   /* section01 */
-  .section01 .initials {
-    width: 80%;
+  .section01 {
+    height: 100dvh;
   }
   .section01 .profile {
-    flex-direction: column;
     gap: 3vw;
     padding: 3vw;
     top: 10dvh;
-  }
-  .section01 .profile div {
-    width: 100%;
   }
   .section01 .profile .photoCard {
     text-align: center;
   }
   .section01 .profile .introduction {
+    flex-direction: column;
     gap: 1vw;
-  }
-  .section01 .profile .introduction br {
-    display: none;
   }
 
   /* section02 */
@@ -664,31 +693,19 @@ body:has(:popover-open) .header a {
   }
 
   /* section01 */
-  .section01 .initials {
-    width: 70%;
-  }
   .section01 .profile {
     width: 80%;
     top: 20dvh;
   }
-  .section01 .profile h2 {
-    font-size: 30px;
-  }
-  .section01 .profile div {
-    width: 100%;
-  }
   .section01 .profile .photoCard {
     text-align: center;
   }
-  .section01 .profile .photoCard img {
+  /* .section01 .profile .photoCard img {
     height: 40vw;
-  }
+  } */
   .section01 .profile .introduction {
     gap: 1vw;
     font-size: 17px;
-  }
-  .section01 .profile .introduction br {
-    display: none;
   }
 
   /* section02 */
@@ -776,7 +793,6 @@ body:has(:popover-open) .header a {
 @media screen and (max-width: 430px) {
   .section01 .profile {
     width: 80%;
-    height: 23%;
   }
   .section01 .profile h2 {
     font-size: 12px;
