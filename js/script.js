@@ -18,8 +18,9 @@ function handleScr() {
 
     let nextSection = sections[index + 1];
     let isActive =
-      scrY >= section.offsetTop &&
-      (!nextSection || scrY < nextSection.offsetTop);
+      scrY + section.offsetHeight / 10 >= section.offsetTop &&
+      (!nextSection ||
+        scrY + section.offsetHeight / 10 < nextSection.offsetTop);
 
     let link = document.querySelector(
       `.sidebar ul li a[href='#${section.id}']`

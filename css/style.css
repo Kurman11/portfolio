@@ -145,12 +145,12 @@ h2 {
   display: block;
   width: 20px;
   height: 1px;
-  background-color: white;
+  background: white;
 }
 
 .sidebar ul li.active a::after {
   width: 40px;
-  background-color: white;
+  background: white;
   transition: all 0.4s ease;
 }
 
@@ -303,60 +303,79 @@ h2 {
 .modal .modal-introduction-div { display: flex; flex-direction: column; justify-content: space-between; gap: 20px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); } */
 
 /* section03 */
+.section03 {
+  background: rgb(35 35 35);
+}
+.section03 .swiper {
+  width: 95%;
+  height: 70%;
+  top: 15%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-/* .section03 {
-  overflow: hidden;
-  padding: 120px 0;
+.section03 .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 10px;
+  background: #fff;
+  opacity: 0.1;
+  transition: opacity 0.5s;
+}
+
+.section03 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 90dvh;
+  object-fit: cover;
+}
+
+.section03 .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}
+
+.section03 .slide-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  color: var(--color-white);
+  background: var(--bgColor-gray40);
+}
+
+.section03 .swiper-button-next::after {
+  position: relative;
+  left: 3px;
+}
+
+.section03 .swiper-button-prev::after {
+  position: relative;
+  right: 3px;
+}
+
+.section03 .swiper-pagination-bullet-active {
   background: rgb(35 35 35);
 }
 
-.section03 .textBox {
+.swiper-wrapper .swiper-slide .box {
   width: 100%;
-  margin: 0 auto;
-  text-transform: uppercase;
-  color: #0f0d0d;
-}
-
-.section03 .textBox h2 {
-  margin-bottom: 5px;
-  padding-left: 25px;
-  font-size: 72px;
-  letter-spacing: -5px;
-  color: var(--color-white);
-}
-
-.section03 .list {
-  display: flex;
-  flex-wrap: nowrap;
-  padding: 6% 0;
-}
-
-.section03 .list > li {
-  width: 600px;
-  height: 520px;
-  padding: 0 30px;
-  box-sizing: border-box;
-  flex-shrink: 0;
-}
-
-.section03 .list > li .box {
-  width: 100%;
-  height: 100%;
+  height: 90%;
   overflow: hidden;
   position: relative;
-  background-color: #000;
 }
 
-.section03 .list > li .box:hover {
+.swiper-wrapper .swiper-slide .box:hover {
   transform: scale(0.98);
   filter: brightness(60%);
 }
 
-.section03 .list > li .box:hover:after {
+.swiper-wrapper .swiper-slide .box:hover:after {
   opacity: 0.5;
 }
 
-.section03 .list .project .project-img {
+.swiper-wrapper .swiper-slide .box .project-img {
   width: 100%;
   height: 100%;
 }
@@ -413,62 +432,6 @@ h2 {
 
 .modal .modal-introduction-div .modal-introduction-ul-sub li {
   list-style-type: disc;
-} */
-
-/* section03 */
-.section03 {
-  background: rgb(35 35 35);
-}
-.section03 .swiper {
-  width: 95%;
-  height: 85%;
-  top: 15%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.section03 .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  opacity: 0.1;
-  transition: opacity 0.5s;
-}
-
-.section03 .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 90dvh;
-  object-fit: cover;
-}
-
-.section03 .swiper-slide.swiper-slide-active {
-  opacity: 1;
-}
-
-.section03 .slide-btn {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  color: var(--color-white);
-  background: var(--bgColor-gray40);
-}
-
-.section03 .swiper-button-next::after {
-  position: relative;
-  left: 3px;
-}
-
-.section03 .swiper-button-prev::after {
-  position: relative;
-  right: 3px;
-}
-
-.section03 .swiper-pagination-bullet-active {
-  background: rgb(35 35 35);
 }
 
 /* section04 */
@@ -599,6 +562,10 @@ body:has(:popover-open) .header a {
   }
   .main .main-text-box {
     font-size: 6vw;
+  }
+  /* sidebar */
+  .sidebar {
+    display: none;
   }
 
   /* section01 */
