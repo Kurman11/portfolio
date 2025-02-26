@@ -99,6 +99,19 @@
     <header>
       <div class="logo-area">
         <h1>CREATIVE KIM YONGJIN</h1>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          />
+        </svg>
       </div>
     </header>
     <div class="sidebar">
@@ -284,24 +297,52 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="box">
-              <div class="project">
-                <button
-                  class="project-open-btn"
-                  type="button"
-                  popovertarget="modal"
-                >
-                  <h4>오늘, 이음</h4>
-                  <img
-                    class="project-img"
-                    src="./asset/images/이음메인페이지.png"
-                    alt="오늘, 이음 메인페이지"
-                  />
-                </button>
-              </div>
+              <button
+                class="project-open-btn"
+                type="button"
+                popovertarget="modal"
+              >
+                <h4>오늘, 이음</h4>
+                <img
+                  class="project-img"
+                  src="./asset/images/이음메인페이지.png"
+                  alt="오늘, 이음 메인페이지"
+                />
+              </button>
             </div>
           </div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">
+            <div class="box">
+              <button
+                class="project-open-btn"
+                type="button"
+                popovertarget="modal"
+              >
+                <h4>오늘의취향</h4>
+                <img
+                  class="project-img"
+                  src="./asset/images/오늘의취향메인페이지.png"
+                  alt="오늘의취향메인페이지"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <button
+                class="project-open-btn"
+                type="button"
+                popovertarget="rescue9"
+              >
+                <h4>편식구조대</h4>
+                <img
+                  class="project-img"
+                  src="./asset/images/편식구조대.png"
+                  alt="편식구조대"
+                />
+              </button>
+            </div>
+          </div>
           <div class="swiper-slide">Slide 4</div>
           <div class="swiper-slide">Slide 5</div>
           <div class="swiper-slide">Slide 6</div>
@@ -384,6 +425,108 @@
           </ul>
         </div>
         <a href="https://github.com/Kurman11/ieum" class="btn" target="_blank">
+          View Code
+        </a>
+      </div>
+    </div>
+
+    <div class="modal" role="dialog" id="modal" popover>
+      <button
+        class="modal-close-btn"
+        type="button"
+        popovertarget="modal"
+        popovertargetaction="hide"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          class="bi bi-x-lg"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+          />
+        </svg>
+      </button>
+      <div class="modal-introduction-div">
+        <h4>오늘, 이음</h4>
+        <div>
+          <ul class="modal-introduction-ul">
+            <li><b>팀 프로젝트</b></li>
+            <li><b>역할 : </b> 팀 리더 / 백엔드 개발</li>
+            <li><b>프로젝트 기간 : </b> 2023.05.22 ~ 2023.06.16</li>
+            <li>
+              <b>프로젝트 소개 : </b>오늘, 이음 프로젝트는 밸런스 게임을 통해
+              사용자들이 현실적인 주제와 공감할 수 있는 주제로 나뉘어 소통할 수
+              있는 커뮤니티 사이트입니다.
+            </li>
+          </ul>
+          <br />
+          <b>담당업무</b>
+          <ul class="modal-introduction-ul-sub">
+            <li>Django를 활용한 기본 CRUD 기능 구현</li>
+            <li>Spotify API를 활용한 프로필 페이지 제작</li>
+            <li>프로젝트 진행 중 발생한 각종 오류 해결 및 팀원 지원</li>
+            <li>
+              팀 리더 역할 수행, 원활한 협업을 위한 커뮤니케이션 및 프로젝트
+              관리
+            </li>
+          </ul>
+        </div>
+        <a href="https://github.com/Kurman11/ieum" class="btn" target="_blank">
+          View Code
+        </a>
+      </div>
+    </div>
+
+    <div class="modal" role="dialog" id="rescue9" popover>
+      <button
+        class="modal-close-btn"
+        type="button"
+        popovertarget="rescue9"
+        popovertargetaction="hide"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          class="bi bi-x-lg"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+          />
+        </svg>
+      </button>
+      <div class="modal-introduction-div">
+        <h4>편식구조대</h4>
+        <div>
+          <ul class="modal-introduction-ul">
+            <li><b>팀 프로젝트</b></li>
+            <li><b>역할 : </b> 팀 리더 / 백엔드 개발</li>
+            <li><b>프로젝트 기간 : </b> 2023.05.09 ~ 2023.05.19</li>
+            <li>
+              <b>프로젝트 소개 : </b>편의점 이용률 상승에 따라 편의점 음식을
+              이용할 때, 소비자의 취향 상황 등을 고려한 선택의 다양화 제공을
+              위해 사이트를 제작했습니다.
+            </li>
+          </ul>
+          <br />
+          <b>담당업무</b>
+          <ul class="modal-introduction-ul-sub">
+            <li>Django를 활용한 기본 CRUD 기능 구현</li>
+            <li>products페이지 제작 밑</li>
+            <li>프로젝트 진행 중 발생한 각종 오류 해결 및 팀원 지원</li>
+            <li>
+              팀 리더 역할 수행, 원활한 협업을 위한 커뮤니케이션 및 프로젝트
+              관리
+            </li>
+          </ul>
+        </div>
+        <a
+          href="https://github.com/Kurman11/Rescue9"
+          class="btn"
+          target="_blank"
+        >
           View Code
         </a>
       </div>
