@@ -97,23 +97,82 @@
 -->
 
     <header>
-      <div class="logo-area">
-        <h1>CREATIVE KIM YONGJIN</h1>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-list"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-          />
-        </svg>
+      <h1>CREATIVE KIM YONGJIN</h1>
+      <div class="hamburger">
+        <input type="checkbox" id="menu" name="menu" hidden />
+        <label for="menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+        </label>
       </div>
     </header>
+    <div class="menu-list">
+      <div class="menu-flex">
+        <ul>
+          <li class="active"><a href="#main">Main</a></li>
+          <li><a href="#section01">About me</a></li>
+          <li><a href="#section02">Skills</a></li>
+          <li><a href="#section03">Project</a></li>
+          <li><a href="#section04">contact</a></li>
+        </ul>
+        <div class="close-btn">
+          <input type="checkbox" id="menu" name="menu" hidden />
+          <label for="menu">
+            <svg
+              class="menu-close-btn"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="bi bi-x-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+              />
+            </svg>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="menu-bg">
+        <div class="close-btn">
+          <input type="checkbox" id="menu" name="menu" hidden />
+          <label for="menu">
+            <svg
+              class="menu-close-btn"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="bi bi-x-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+              />
+            </svg>
+          </label>
+          <label for="menu-toggle" class="menu-overlay"></label>
+        </div>
+        <ul>
+          <li><a href="#main">Main</a></li>
+          <li><a href="#section01">About me</a></li>
+          <li><a href="#section02">Skills</a></li>
+          <li><a href="#section03">Project</a></li>
+          <li><a href="#section04">contact</a></li>
+        </ul>
+      </div>
+      <label for="menu" class="menu-overlay"></label>
+    </div> -->
     <div class="sidebar">
       <ul>
         <li class="active"><a href="#main">Main</a></li>
@@ -402,7 +461,7 @@
       <div class="modal-introduction-div">
         <h4>오늘, 이음</h4>
         <div>
-          <ul class="modal-introduction-ul">
+          <ul>
             <li><b>팀 프로젝트</b></li>
             <li><b>역할 : </b> 팀 리더 / 백엔드 개발</li>
             <li><b>프로젝트 기간 : </b> 2023.05.22 ~ 2023.06.16</li>
@@ -414,7 +473,7 @@
           </ul>
           <br />
           <b>담당업무</b>
-          <ul class="modal-introduction-ul-sub">
+          <ul class="modal-introduction-ul">
             <li>Django를 활용한 기본 CRUD 기능 구현</li>
             <li>Spotify API를 활용한 프로필 페이지 제작</li>
             <li>프로젝트 진행 중 발생한 각종 오류 해결 및 팀원 지원</li>

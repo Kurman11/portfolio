@@ -1,9 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.saveStyles(".mobile, .desktop");
 
-const sidebar = document.getElementsByClassName("sidebar")[0];
-const sidebarItems = document.querySelectorAll(".sidebar ul li a");
-
 function handleScr() {
   let scrY = window.scrollY;
   let main = document.getElementsByClassName("main")[0];
@@ -25,11 +22,24 @@ function handleScr() {
     let link = document.querySelector(
       `.sidebar ul li a[href='#${section.id}']`
     );
+
+    let menu = document.querySelector(
+      `.menu-list ul li a[href='#${section.id}']`
+    );
+
     if (link) {
       if (isActive) {
         link.parentElement.classList.add("active");
       } else {
         link.parentElement.classList.remove("active");
+      }
+    }
+
+    if (menu) {
+      if (isActive) {
+        menu.parentElement.classList.add("active");
+      } else {
+        menu.parentElement.classList.remove("active");
       }
     }
   });

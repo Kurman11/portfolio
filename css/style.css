@@ -62,14 +62,24 @@ body:has(:popover-open) .swiper-slide.swiper-slide-active {
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   position: absolute;
-  top: 10px;
-  left: 20px;
   z-index: 110;
+}
+
+header .hamburger {
+  display: none;
+}
+
+.menu-list {
+  display: none;
 }
 
 h1 {
   width: 100%;
+  margin: 10px 0 0 20px;
   font-family: "Noto Sans KR", serif;
   font-weight: var(--font-normal);
   letter-spacing: 2px;
@@ -79,11 +89,6 @@ h1 {
 
 h2 {
   font-size: 2vw;
-}
-
-.logo-area {
-  display: flex;
-  justify-content: space-between;
 }
 
 /* ===== 메인 스타일 ===== */
@@ -215,38 +220,19 @@ h2 {
   border-radius: 10px;
 }
 .section01 .profile ul {
-  /* display: flex;
-  flex-wrap: wrap;
-  gap: 10px; */
+  /* display: flex; flex-wrap: wrap; gap: 10px; */
   font-size: 18px;
   font-weight: var(--font-medium);
   color: var(--color-white);
 }
 
-/* .section01 .profile .introduction-sub {
-  display: flex;
-  align-items: center;
-  width: 55%;
-  height: 100px;
-  position: relative;
-  padding: 15px;
+/* .section01 .profile .introduction-sub { display: flex; align-items: center; width: 55%; height: 100px; position: relative; padding: 15px;
+ border-radius: 10px; color: var(--color-white); } */
 
-  border-radius: 10px;
-  color: var(--color-white);
-} */
+/* .section01 .profile h2 { margin-bottom: 15px; font-weight: var(--font-bold); color: var(--color-white); } */
 
-/* .section01 .profile h2 {
-  margin-bottom: 15px;
-  font-weight: var(--font-bold);
-  color: var(--color-white);
-} */
-
-/* .section01 .profile ul li:nth-child(odd) {
-  width: 30%;
-}
-.section01 .profile ul li:nth-child(even) {
-  width: 60%;
-} */
+/* .section01 .profile ul li:nth-child(odd) { width: 30%; } 
+.section01 .profile ul li:nth-child(even) { width: 60%; } */
 
 .profile ul .introduction-flex {
   display: flex;
@@ -322,11 +308,10 @@ h2 {
   width: 95%;
   height: 70%;
   top: 15%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
-.section03 .swiper-slide {
+.section03 .swiper .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -338,40 +323,6 @@ h2 {
   transition: opacity 0.5s;
   pointer-events: none;
   cursor: pointer;
-}
-
-.section03 .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 90dvh;
-  object-fit: cover;
-}
-
-.section03 .swiper-slide.swiper-slide-active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.section03 .slide-btn {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  color: var(--color-white);
-  background: var(--bgColor-gray40);
-}
-
-.section03 .swiper-button-next::after {
-  position: relative;
-  left: 3px;
-}
-
-.section03 .swiper-button-prev::after {
-  position: relative;
-  right: 3px;
-}
-
-.section03 .swiper-pagination-bullet-active {
-  background: rgb(35 35 35);
 }
 
 .swiper-wrapper .swiper-slide .box {
@@ -392,6 +343,35 @@ h2 {
 .swiper-wrapper .swiper-slide .box .project-img {
   width: 100%;
   height: 100%;
+}
+
+/* .section03 .swiper .swiper-slide img { display: block; width: 100%; height: 90dvh; object-fit: cover; } */
+
+.section03 .swiper .swiper-slide.swiper-slide-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.section03 .swiper .slide-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  color: var(--color-white);
+  background: var(--bgColor-gray40);
+}
+
+.section03 .swiper .swiper-button-next::after {
+  position: relative;
+  left: 3px;
+}
+
+.section03 .swiper .swiper-button-prev::after {
+  position: relative;
+  right: 3px;
+}
+
+.section03 .swiper .swiper-pagination-bullet-active {
+  background: rgb(35 35 35);
 }
 
 .modal {
@@ -437,15 +417,15 @@ h2 {
   transform: translate(-50%, -50%);
 }
 
+.modal .modal-introduction-div .modal-introduction-ul li {
+  list-style-type: disc;
+}
+
 .modal .modal-introduction-div a {
   width: 100px;
   height: 30px;
   line-height: 30px;
   align-self: flex-end;
-}
-
-.modal .modal-introduction-div .modal-introduction-ul-sub li {
-  list-style-type: disc;
 }
 
 /* section04 */
@@ -556,6 +536,65 @@ body:has(:popover-open) .header a {
 
 /* tablet */
 @media screen and (max-width: 1280px) {
+  /* header */
+  header {
+    position: fixed;
+  }
+  header .hamburger {
+    display: block;
+    margin: 10px 10px 0 0;
+    color: white;
+  }
+
+  header .hamburger svg {
+    cursor: pointer;
+  }
+
+  body:has(:checked) .menu-list {
+    height: 200px;
+  }
+
+  .menu-list {
+    overflow: hidden; /* visibility: inherit; */
+    display: block;
+    width: 100%;
+    height: 0;
+    position: fixed;
+    background: hsl(0, 1%, 41%);
+    transition: height 1s;
+    z-index: 1500;
+  }
+
+  .menu-list .menu-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 0 20px;
+  }
+
+  .menu-list .menu-flex .menu-close-btn {
+    width: 30px;
+    height: 30px;
+    border: 2px solid;
+    cursor: pointer;
+    color: white;
+  }
+
+  .menu-list .menu-flex ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu-flex ul li a {
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  .menu-flex ul li.active a {
+    color: white;
+  }
+
+  /* main */
   .main {
     width: 100%;
     height: 100dvh;
@@ -681,9 +720,7 @@ body:has(:popover-open) .header a {
   .section01 .profile .photoCard {
     text-align: center;
   }
-  /* .section01 .profile .photoCard img {
-    height: 40vw;
-  } */
+  /* .section01 .profile .photoCard img { height: 40vw; } */
   .section01 .profile .introduction {
     gap: 1vw;
     font-size: 17px;
