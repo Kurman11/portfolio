@@ -287,6 +287,36 @@
         </div>
       </div>
     </section>
+    <section class="section-sub">
+      <h2 class="section-sub-title">Study</h2>
+      <ul>
+        <li>
+          <a href="https://github.com/KDT2-Algorithm-study" target="_blank">
+            <img src="./asset/images/study01.png" alt="알고리즘스터디" />
+            <p>
+              <b>KDT2-Algorithm-study</b><br /><b>2023-02-08 ~ 2023-05-09</b
+              ><br />
+              <b
+                >교육 이수하는 도중 스터디에 참여해서 추가적인 알고리즘 공부를
+                했습니다.</b
+              >
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/M-Algorithm-Study" target="_blank">
+            <img src="./asset/images/study02.png" alt="알고리즘스터디" />
+            <p>
+              <b>M-Algorithm-Study</b><br /><b>2023-07-03 ~ 2023-11-14</b><br />
+              <b
+                >교육 완료 후 동료들과 함께 스터디를 개설해서 알고리즘 공부를
+                진행했습니다.</b
+              >
+            </p>
+          </a>
+        </li>
+      </ul>
+    </section>
     <section class="section02" id="section02">
       <h2 class="section02-title">SKILLS</h2>
       <!-- TODO.gitlab, styled-components, emotion css, react-query, AWS, SEO 추가하세요-->
@@ -359,7 +389,7 @@
               <button
                 class="project-open-btn"
                 type="button"
-                popovertarget="modal"
+                popovertarget="ieum"
               >
                 <h4>오늘, 이음</h4>
                 <img
@@ -375,7 +405,7 @@
               <button
                 class="project-open-btn"
                 type="button"
-                popovertarget="modal"
+                popovertarget="todays-taste"
               >
                 <h4>오늘의취향</h4>
                 <img
@@ -440,11 +470,11 @@
       <p>© 2025 Kim, Yong-Jin. All Rights Reserved.</p>
     </footer>
 
-    <div class="modal" role="dialog" id="modal" popover>
+    <div class="modal" role="dialog" id="ieum" popover>
       <button
         class="modal-close-btn"
         type="button"
-        popovertarget="modal"
+        popovertarget="ieum"
         popovertargetaction="hide"
       >
         <svg
@@ -489,11 +519,11 @@
       </div>
     </div>
 
-    <div class="modal" role="dialog" id="modal" popover>
+    <div class="modal" role="dialog" id="todays-taste" popover>
       <button
         class="modal-close-btn"
         type="button"
-        popovertarget="modal"
+        popovertarget="todays-taste"
         popovertargetaction="hide"
       >
         <svg
@@ -508,31 +538,34 @@
         </svg>
       </button>
       <div class="modal-introduction-div">
-        <h4>오늘, 이음</h4>
+        <h4>오늘의 취향</h4>
         <div>
           <ul class="modal-introduction-ul">
             <li><b>팀 프로젝트</b></li>
-            <li><b>역할 : </b> 팀 리더 / 백엔드 개발</li>
-            <li><b>프로젝트 기간 : </b> 2023.05.22 ~ 2023.06.16</li>
+            <li><b>역할 : </b>풀스택 개발</li>
+            <li><b>프로젝트 기간 : </b> 2023.04.27 ~ 2023.05.08</li>
             <li>
-              <b>프로젝트 소개 : </b>오늘, 이음 프로젝트는 밸런스 게임을 통해
-              사용자들이 현실적인 주제와 공감할 수 있는 주제로 나뉘어 소통할 수
-              있는 커뮤니티 사이트입니다.
+              <b>프로젝트 소개 : </b>기존에 배운 내용을 토대로 주요 기능 위주의
+              개발을 하며, 해당 페이지를 최대한 비슷하게 클론코딩을 목표로
+              제작했습니다.
             </li>
           </ul>
           <br />
           <b>담당업무</b>
           <ul class="modal-introduction-ul-sub">
             <li>Django를 활용한 기본 CRUD 기능 구현</li>
-            <li>Spotify API를 활용한 프로필 페이지 제작</li>
-            <li>프로젝트 진행 중 발생한 각종 오류 해결 및 팀원 지원</li>
             <li>
-              팀 리더 역할 수행, 원활한 협업을 위한 커뮤니케이션 및 프로젝트
-              관리
+              로그인 페이지, 회원가입 페이지, profile 페이지 이후 팀원들과
+              공동으로 나머지 페이지 제작
             </li>
+            <li>프로젝트 진행 중 발생한 각종 오류 해결 및 팀원 지원</li>
           </ul>
         </div>
-        <a href="https://github.com/Kurman11/ieum" class="btn" target="_blank">
+        <a
+          href="https://github.com/Kurman11/Todays-taste"
+          class="btn"
+          target="_blank"
+        >
           View Code
         </a>
       </div>
@@ -573,7 +606,7 @@
           <b>담당업무</b>
           <ul class="modal-introduction-ul-sub">
             <li>Django를 활용한 기본 CRUD 기능 구현</li>
-            <li>products페이지 제작 밑</li>
+            <li>products페이지 제작</li>
             <li>프로젝트 진행 중 발생한 각종 오류 해결 및 팀원 지원</li>
             <li>
               팀 리더 역할 수행, 원활한 협업을 위한 커뮤니케이션 및 프로젝트
@@ -602,4 +635,3 @@
     <script src="./js/script.js"></script>
   </body>
 </html>
-.

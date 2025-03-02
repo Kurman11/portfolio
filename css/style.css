@@ -172,7 +172,6 @@ h2 {
 }
 
 /* section, section-title */
-.section01,
 .section02,
 .section03 {
   /* overflow: hidden; */
@@ -184,18 +183,19 @@ h2 {
 }
 
 .section01 .section01-title,
+.section-sub .section-sub-title,
 .section02 .section02-title,
 .section03 .section03-title {
-  position: absolute;
   color: var(--color-white);
   font-size: 4vw;
 }
 
-/* ===== Section 01 ===== */
+/* Section01 */
 .section01 {
   display: flex;
   flex-direction: column;
   height: 80dvh;
+  padding: 6vh 4vw;
   background: rgb(35 35 35);
 }
 .section01 .profile {
@@ -241,9 +241,46 @@ h2 {
   height: 50px;
 }
 
+/* section-sub */
+.section-sub {
+  height: 50dvh;
+  padding: 6vh 4vw;
+  background: hsl(0, 0%, 18%);
+}
+.section-sub ul {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.section-sub li {
+  width: 50%;
+  height: 25dvh;
+  background: rgb(35 35 35);
+  border-radius: 20px;
+  color: white;
+}
+.section-sub li a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-sub li:hover {
+  color: var(--color-white);
+  background-color: var(--color-gary);
+}
+
+.section-sub li a img {
+  width: 80px;
+  height: 80px;
+}
 /* ===== Section 02 ===== */
 .section02 {
-  background: hsl(0, 0%, 18%);
+  background: rgb(35 35 35);
 }
 .section02 > img,
 .section02 .section-card {
@@ -302,7 +339,7 @@ h2 {
 
 /* section03 */
 .section03 {
-  background: rgb(35 35 35);
+  background: hsl(0, 0%, 18%);
 }
 .section03 .swiper {
   width: 95%;
@@ -636,6 +673,18 @@ body:has(:popover-open) .header a {
   .section01 .profile .introduction {
     flex-direction: column;
     gap: 1vw;
+  }
+
+  /* section-sub */
+  .section-sub ul {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .section-sub ul li {
+    width: 100%;
+    height: 12.5dvh;
+    color: white;
   }
 
   /* section02 */
