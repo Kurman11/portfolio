@@ -48,6 +48,24 @@
   }
 }
 
+@keyframes leftTopGo {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-20vw, -38vh);
+  }
+}
+
+@keyframes rightBottomGo {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(20vw, 38vh);
+  }
+}
+
 html {
   /* overflow-x: hidden; */
   scroll-behavior: smooth;
@@ -96,22 +114,15 @@ h2 {
   width: 100%;
   height: 100dvh;
   position: relative;
-  background: url("../asset/images/bg.jpg") no-repeat center / cover;
-  background-attachment: fixed;
-  overflow: hidden;
 }
 
-.main .main-text-box {
-  text-align: center;
+.main .bg {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  z-index: 90;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-weight: var(--font-normal);
-  letter-spacing: 2px;
-  font-size: 80px;
-  color: var(--color-white);
+  background: url("../asset/images/bg.jpg") no-repeat center / cover;
+  background-attachment: fixed;
+  filter: blur(10px);
 }
 
 .main .bg-filter {
@@ -121,19 +132,63 @@ h2 {
   top: 0;
   left: 0;
   z-index: 10;
+  overflow: hidden;
   background-color: var(--bgColor-shadow50);
+}
+
+.main .main-text-area {
+  display: flex;
+  gap: 0 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  letter-spacing: -1px;
+  color: var(--color-white);
+  animation: opacity 2s;
+}
+
+.main .main-text-area h2 {
+  white-space: nowrap;
+  font-size: 80px;
+  font-weight: 300;
+  transform: translate(0);
+  animation: 2s forwards;
+  animation-delay: 1.5s;
+}
+
+.main .main-text-area h2:nth-of-type(1) {
+  animation-name: leftTopGo;
+}
+.main .main-text-area h2:nth-of-type(2) {
+  animation-name: rightBottomGo;
+}
+
+.main .main-text-box {
+  text-align: center;
+  position: absolute;
+  z-index: 90;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  font-weight: var(--font-normal);
+  letter-spacing: 2px;
+  color: var(--color-white);
 }
 
 .main .text-area {
   animation: slide-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 2s;
 }
 .main .text-area-sub01 {
   animation: slide-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation-delay: 0.5s;
+  animation-delay: 2.5s;
 }
 .main .text-area-sub02 {
   animation: slide-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation-delay: 1s;
+  animation-delay: 3s;
 }
 /* sidebar */
 .sidebar {
@@ -502,6 +557,9 @@ h2 {
 }
 
 .section04 .aspiration a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100px;
   height: 40px;
   line-height: 40px;
@@ -576,6 +634,7 @@ body:has(:popover-open) .header a {
   /* header */
   header {
     position: fixed;
+    background: hsl(0, 1%, 41%);
   }
   header .hamburger {
     display: block;
@@ -611,7 +670,6 @@ body:has(:popover-open) .header a {
   .menu-list .menu-flex .menu-close-btn {
     width: 30px;
     height: 30px;
-    border: 2px solid;
     cursor: pointer;
     color: white;
   }
@@ -650,6 +708,7 @@ body:has(:popover-open) .header a {
     z-index: 10;
     background-color: var(--bgColor-shadow50);
   }
+  .main .main-text-area h2,
   .main .main-text-box {
     font-size: 6vw;
   }

@@ -3,44 +3,36 @@ ScrollTrigger.saveStyles(".mobile, .desktop");
 
 function handleScr() {
   let scrY = window.scrollY;
+  let viewportCenter = scrY + window.innerHeight / 2;
+
   let main = document.getElementsByClassName("main")[0];
   let section01 = document.getElementsByClassName("section01")[0];
+  let sectionSub = document.getElementsByClassName("section-sub")[0];
   let section02 = document.getElementsByClassName("section02")[0];
   let section03 = document.getElementsByClassName("section03")[0];
   let section04 = document.getElementsByClassName("section04")[0];
-  let sections = [main, section01, section02, section03, section04];
 
-  sections.forEach((section, index) => {
+  let sections = [main, section01, sectionSub, section02, section03, section04];
+
+  sections.forEach((section) => {
     if (!section) return;
 
-    let nextSection = sections[index + 1];
     let isActive =
-      scrY + section.offsetHeight / 10 >= section.offsetTop &&
-      (!nextSection ||
-        scrY + section.offsetHeight / 10 < nextSection.offsetTop);
+      viewportCenter >= section.offsetTop &&
+      viewportCenter < section.offsetTop + section.offsetHeight;
 
     let link = document.querySelector(
       `.sidebar ul li a[href='#${section.id}']`
     );
-
     let menu = document.querySelector(
       `.menu-list ul li a[href='#${section.id}']`
     );
 
     if (link) {
-      if (isActive) {
-        link.parentElement.classList.add("active");
-      } else {
-        link.parentElement.classList.remove("active");
-      }
+      link.parentElement.classList.toggle("active", isActive);
     }
-
     if (menu) {
-      if (isActive) {
-        menu.parentElement.classList.add("active");
-      } else {
-        menu.parentElement.classList.remove("active");
-      }
+      menu.parentElement.classList.toggle("active", isActive);
     }
   });
 }
