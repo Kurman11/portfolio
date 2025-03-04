@@ -251,7 +251,7 @@ h2 {
 
 /* ===== Section 02 ===== */
 
-.section02 {
+.section03 {
   overflow: hidden;
   width: 100%;
   height: 100dvh;
@@ -261,14 +261,14 @@ h2 {
   display: flex;
 }
 
-.section02 .section02-title {
+.section03 .section03-title {
   position: absolute;
   color: var(--color-black);
   font-size: 4vw;
 }
 
-.section02 > img,
-.section02 .section-card {
+.section03 > img,
+.section03 .section-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -278,12 +278,12 @@ h2 {
   transform: translate(-50%, -50%);
 }
 
-.section02 > img {
+.section03 > img {
   width: 70px;
   height: 70px;
 }
 
-.section02 .section-card {
+.section03 .section-card {
   flex-direction: column;
   align-items: center;
   gap: 20px;
@@ -296,7 +296,7 @@ h2 {
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
-.section02 .section-card div img {
+.section03 .section-card div img {
   height: 60px;
 }
 
@@ -319,34 +319,34 @@ h2 {
 
 .modal .modal-introduction-div { display: flex; flex-direction: column; justify-content: space-between; gap: 20px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); } */
 
-/* section03 */
+/* section04 */
 
-.section03 {
+.section04 {
   overflow: hidden;
   padding: 120px 0;
 }
 
-.section03 .textBox {
+.section04 .textBox {
   width: 100%;
   margin: 0 auto;
   text-transform: uppercase;
   color: #0f0d0d;
 }
 
-.section03 .textBox h2 {
+.section04 .textBox h2 {
   margin-bottom: 5px;
   padding-left: 25px;
   font-size: 72px;
   letter-spacing: -5px;
 }
 
-.section03 .list {
+.section04 .list {
   display: flex;
   flex-wrap: nowrap;
   padding: 6% 0;
 }
 
-.section03 .list > li {
+.section04 .list > li {
   width: 600px;
   height: 520px;
   padding: 0 30px;
@@ -354,7 +354,7 @@ h2 {
   flex-shrink: 0;
 }
 
-.section03 .list > li .box {
+.section04 .list > li .box {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -362,16 +362,16 @@ h2 {
   background-color: #000;
 }
 
-.section03 .list > li .box:hover {
+.section04 .list > li .box:hover {
   transform: scale(0.98);
   filter: brightness(60%);
 }
 
-.section03 .list > li .box:hover:after {
+.section04 .list > li .box:hover:after {
   opacity: 0.5;
 }
 
-.section03 .list .project .project-img {
+.section04 .list .project .project-img {
   width: 100%;
   height: 100%;
 }
@@ -430,15 +430,15 @@ h2 {
   list-style-type: disc;
 }
 
-/* section04 */
-.section04 {
+/* section05 */
+.section05 {
   width: 100%;
   height: 90vh;
   position: relative;
   background: url("../asset/images/Contact_bg.jpg") no-repeat;
 }
 
-.section04 .aspiration {
+.section05 .aspiration {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -454,26 +454,26 @@ h2 {
   border-radius: 10px;
   color: var(--color-black);
 }
-.section04 .aspiration h3 {
+.section05 .aspiration h3 {
   font-size: 80px;
 }
 
-.section04 .aspiration p {
+.section05 .aspiration p {
   font-size: 20px;
 }
-.section04 .aspiration .contact {
+.section05 .aspiration .contact {
   display: flex;
   gap: 15px;
 }
 
-.section04 .aspiration a {
+.section05 .aspiration a {
   width: 100px;
   height: 40px;
   line-height: 40px;
   font-size: 18px;
 }
 
-.section04 .bg-filter {
+.section05 .bg-filter {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -483,10 +483,10 @@ h2 {
   background-color: var(--bgColor-shadow20-blue);
 }
 
-/* section03, 04 공통 */
+/* section04, 04 공통 */
 
 .modal .modal-introduction-div a,
-.section04 .aspiration a {
+.section05 .aspiration a {
   text-align: center;
   font-size: 16px;
   color: var(--color-gary);
@@ -496,7 +496,7 @@ h2 {
   transition: all 0.4s;
 }
 .modal .modal-introduction-div a:hover,
-.section04 .aspiration a:hover {
+.section05 .aspiration a:hover {
   color: var(--color-white);
   background-color: var(--color-gary);
 }
@@ -522,12 +522,12 @@ body:has(:popover-open) {
   overflow: hidden;
 }
 
-body:has(:popover-open) .section03 .list > li .box:hover {
+body:has(:popover-open) .section04 .list > li .box:hover {
   transform: scale(1);
   filter: none;
 }
 
-body:has(:popover-open) .section03 .list > li .box:hover:after {
+body:has(:popover-open) .section04 .list > li .box:hover:after {
   opacity: 1;
 }
 
@@ -583,27 +583,27 @@ body:has(:popover-open) .header a {
     display: none;
   }
 
-  /* section02 */
+  /* section03 */
 
-  .section02 > img {
+  .section03 > img {
     width: 7vw;
     height: 7vw;
   }
-  .section02 .section-card {
+  .section03 .section-card {
     gap: 10px;
     width: 40vw;
     height: 40vw;
     font-size: 2vw;
   }
-  .section02 .section-card div img {
+  .section03 .section-card div img {
     height: 7vw;
   }
 
-  /* section03 */
-  .section03 .textBox h2 {
+  /* section04 */
+  .section04 .textBox h2 {
     font-size: 50px;
   }
-  .section03 .list > li {
+  .section04 .list > li {
     width: 450px;
     height: 400px;
     padding: 0 30px;
@@ -628,20 +628,20 @@ body:has(:popover-open) .header a {
     font-size: 13px;
   }
 
-  /* section04 */
+  /* section05 */
 
-  .section04 .aspiration {
+  .section05 .aspiration {
     gap: 20px;
     padding: 60px 0;
     height: 40%;
   }
-  .section04 .aspiration h3 {
+  .section05 .aspiration h3 {
     font-size: 60px;
   }
-  .section04 .aspiration p {
+  .section05 .aspiration p {
     font-size: 17px;
   }
-  .section04 .aspiration a {
+  .section05 .aspiration a {
     width: 80px;
     height: 30px;
     line-height: 30px;
@@ -685,29 +685,29 @@ body:has(:popover-open) .header a {
     display: none;
   }
 
-  /* section02 */
-  .section02 .section02-title {
+  /* section03 */
+  .section03 .section03-title {
     font-size: 5vw;
   }
-  .section02 > img {
+  .section03 > img {
     width: 10vw;
     height: 10vw;
   }
-  .section02 .section-card {
+  .section03 .section-card {
     gap: 10px;
     width: 50vw;
     height: 50vw;
     font-size: 3vw;
   }
-  .section02 .section-card div img {
+  .section03 .section-card div img {
     height: 7vw;
   }
 
-  /* section03 */
-  .section03 .textBox h2 {
+  /* section04 */
+  .section04 .textBox h2 {
     font-size: 40px;
   }
-  .section03 .list > li {
+  .section04 .list > li {
     width: 400px;
     height: 350px;
     padding: 0 30px;
@@ -732,21 +732,21 @@ body:has(:popover-open) .header a {
     font-size: 10px;
   }
 
-  /* section04 */
-  .section04 {
+  /* section05 */
+  .section05 {
     height: 70vh;
   }
-  .section04 .aspiration {
+  .section05 .aspiration {
     gap: 15px;
     height: 40%;
   }
-  .section04 .aspiration h3 {
+  .section05 .aspiration h3 {
     font-size: 50px;
   }
-  .section04 .aspiration p {
+  .section05 .aspiration p {
     font-size: 15px;
   }
-  .section04 .aspiration a {
+  .section05 .aspiration a {
     width: 70px;
     height: 25px;
     line-height: 25px;
@@ -783,16 +783,16 @@ body:has(:popover-open) .header a {
     font-size: 13px;
   }
 
-  /* section02 */
-  .section02 .section02-title {
+  /* section03 */
+  .section03 .section03-title {
     font-size: 8vw;
   }
 
-  /* section03 */
-  .section03 .textBox h2 {
+  /* section04 */
+  .section04 .textBox h2 {
     font-size: 40px;
   }
-  .section03 .list > li {
+  .section04 .list > li {
     width: 350px;
     height: 300px;
     padding: 0 30px;
@@ -817,19 +817,19 @@ body:has(:popover-open) .header a {
     font-size: 10px;
   }
 
-  /* section04 */
+  /* section05 */
 
-  .section04 .aspiration {
+  .section05 .aspiration {
     gap: 15px;
     height: 50%;
   }
-  .section04 .aspiration h3 {
+  .section05 .aspiration h3 {
     font-size: 50px;
   }
-  .section04 .aspiration p {
+  .section05 .aspiration p {
     font-size: 15px;
   }
-  .section04 .aspiration a {
+  .section05 .aspiration a {
     width: 70px;
     height: 25px;
     line-height: 25px;

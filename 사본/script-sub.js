@@ -65,10 +65,10 @@ const section01Animation = () => {
 
 section01Animation();
 
-const section02Animation = () => {
+const section03Animation = () => {
   let ql = gsap.timeline({
     scrollTrigger: {
-      trigger: ".section02",
+      trigger: ".section03",
       start: "top 100%",
       end: "90% 100%",
       scrub: 2,
@@ -88,17 +88,17 @@ const section02Animation = () => {
   ql.fromTo(".discord", { y: "0%" }, { x: "-700%", y: "0%" }, 3);
   ql.fromTo(".gitlab", { y: "0%" }, { x: "700%", y: "-400%" }, 3.2);
   ql.fromTo(".aws", { y: "0%" }, { x: "450%", y: "550%" }, 3.4);
-  ql.fromTo(".section02 div.section-card", { y: "400%" }, { y: "0" }, 3.6);
+  ql.fromTo(".section03 div.section-card", { y: "400%" }, { y: "0" }, 3.6);
 };
 
-section02Animation();
+section03Animation();
 
-const section02TabletAnimation = () => {
+const section03TabletAnimation = () => {
   ScrollTrigger.matchMedia({
     "(max-width: 1280px)": function () {
       let ql = gsap.timeline({
         scrollTrigger: {
-          trigger: ".section02",
+          trigger: ".section03",
           start: "top 100%",
           end: "90% 100%",
           scrub: 2,
@@ -118,18 +118,18 @@ const section02TabletAnimation = () => {
       ql.fromTo(".discord", { y: "0%" }, { x: "-400%", y: "0%" }, 3);
       ql.fromTo(".gitlab", { y: "0%" }, { x: "400%", y: "-400%" }, 3.2);
       ql.fromTo(".aws", { y: "0%" }, { x: "150%", y: "350%" }, 3.4);
-      ql.fromTo(".section02 div.section-card", { y: "400%" }, { y: "0" }, 3.6);
+      ql.fromTo(".section03 div.section-card", { y: "400%" }, { y: "0" }, 3.6);
     },
   });
 };
-section02TabletAnimation();
+section03TabletAnimation();
 
-const section02MobileAnimation = () => {
+const section03MobileAnimation = () => {
   ScrollTrigger.matchMedia({
     "(max-width: 767px)": function () {
       let ql = gsap.timeline({
         scrollTrigger: {
-          trigger: ".section02",
+          trigger: ".section03",
           start: "top 100%",
           end: "90% 100%",
           scrub: 2,
@@ -149,13 +149,13 @@ const section02MobileAnimation = () => {
       ql.fromTo(".discord", { y: "0%" }, { x: "-400%", y: "0%" }, 3);
       ql.fromTo(".gitlab", { y: "0%" }, { x: "400%", y: "-400%" }, 3.2);
       ql.fromTo(".aws", { y: "0%" }, { x: "150%", y: "550%" }, 3.4);
-      ql.fromTo(".section02 div.section-card", { y: "400%" }, { y: "0" }, 3.6);
+      ql.fromTo(".section03 div.section-card", { y: "400%" }, { y: "0" }, 3.6);
     },
   });
 };
-section02MobileAnimation();
+section03MobileAnimation();
 
-// const section03Animation = () => {
+// const section04Animation = () => {
 //   const slidesContainer = document.querySelector("#projectWrapper");
 //   if (!slidesContainer) return;
 
@@ -233,16 +233,16 @@ section02MobileAnimation();
 //   });
 // };
 
-// section03Animation();
+// section04Animation();
 
-const section03Slide = () => {
-  let list = gsap.utils.toArray(".section03 .list > li");
+const section04Slide = () => {
+  let list = gsap.utils.toArray(".section04 .list > li");
 
   gsap.to(list, {
     xPercent: -100 * (list.length - 1),
     ease: "none",
     scrollTrigger: {
-      trigger: ".section03",
+      trigger: ".section04",
       pin: true,
       pinType: "transform",
       scrub: 1,
@@ -253,4 +253,4 @@ const section03Slide = () => {
   });
 };
 
-section03Slide();
+section04Slide();
