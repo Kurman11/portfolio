@@ -1,5 +1,63 @@
 @charset "utf-8";
 
+:root {
+  --bgColor-shadow50: rgba(0, 0, 0, 0.5);
+  --bgColor-gray40: hsla(0, 0%, 100%, 0.4);
+  --bgColor-black35: rgb(35 35 35);
+  --bgColor-black41: hsl(0, 1%, 41%);
+  --bgColor-black55: rgb(55 55 55);
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gary: #888;
+  --font-thin: 200;
+  --font-Light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-SemiBold: 600;
+  --font-bold: 800;
+  --font-black: 900;
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-10%);
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes leftTopGo {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-20vw, -38vh);
+  }
+}
+
+@keyframes rightBottomGo {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(20vw, 38vh);
+  }
+}
+
+@keyframes bgFilter {
+  from {
+    filter: blur(10px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -87,9 +145,7 @@ button {
   border: none;
   cursor: pointer;
 }
-img {
-  vertical-align: middle;
-}
+
 body {
   overflow-x: hidden;
   font-family: "Pretendard Variable", Pretendard, -apple-system,
