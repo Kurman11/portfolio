@@ -553,14 +553,12 @@ h1 {
   .section02 {
     height: auto;
   }
-
   .section02 ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 50px;
   }
-
   .section02 ul li {
     width: 70%;
     height: 12.5dvh;
@@ -568,7 +566,6 @@ h1 {
   }
 
   /* section03 */
-
   .section03 > img {
     width: 6vw;
     height: 6vw;
@@ -658,7 +655,6 @@ h1 {
   }
 
   /* section04 */
-
   .section04 .list > li {
     width: 350px;
     height: 300px;
